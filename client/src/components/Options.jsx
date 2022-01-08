@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         padding: '10px 20px',
-        border: '2px solid black',
+        border: '8px solid black',
+        borderRadius: '30px',
     },
 }));
 
@@ -81,7 +82,7 @@ function Options({ children }) {
                                     fullWidth
                                     startIcon={<Assignment fontSize="large" />}
                                 >
-                                    Copy Your Room ID
+                                    Get Your Room ID
                                 </Button>
                             </CopyToClipboard>
                         </Grid>
@@ -106,7 +107,7 @@ function Options({ children }) {
                                     onClick={leaveCall}
                                     className={classes.margin}
                                 >
-                                    Hang Up
+                                    Leave
                                 </Button>
                             ) : (
                                 <Button

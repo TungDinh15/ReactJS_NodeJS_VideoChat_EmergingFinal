@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             width: '300px',
         },
+        borderRadius: '30px',
+        border: '5px solid black',
     },
     gridContainer: {
         justifyContent: 'center',
@@ -19,8 +21,15 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         padding: '10px',
-        border: '2px solid black',
+        border: '10px solid black',
         margin: '10px',
+        borderRadius: '30px',
+        textAlign: 'center',
+        backgroundColor: '#002200',
+    },
+    nickname: {
+        alignContent: 'center',
+        color: 'white',
     },
 }));
 
@@ -45,7 +54,11 @@ function VideoPlayer() {
             {stream && (
                 <Paper className={classes.paper} >
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography
+                            variant="h5"
+                            gutterBottom
+                            className={classes.nickname}
+                        >
                             {name || 'Your Name'}
                         </Typography>
                         <video
@@ -63,7 +76,11 @@ function VideoPlayer() {
             {callAccepted && !callEnded && (
                 <Paper className={classes.paper} >
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography
+                            variant="h5"
+                            gutterBottom
+                            className={classes.nickname}
+                        >
                             {call.name || 'Name'}
                         </Typography>
                         <video

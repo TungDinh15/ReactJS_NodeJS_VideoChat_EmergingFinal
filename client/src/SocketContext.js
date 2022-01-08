@@ -4,7 +4,7 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('https://video-call-app-emerging.herokuapp.com');
+const socket = io('http://localhost:4000');
 
 const ContextProvider = ({ children }) => {
 
@@ -13,7 +13,7 @@ const ContextProvider = ({ children }) => {
     const [call, setCall] = useState({});
     const [callAccepted, setCallAccepted] = useState(false);
     const [callEnded, setCallEnded] = useState(false);
-    const [name, setName] = useState('name');
+    const [name, setName] = useState('');
 
     const myVideo = useRef();
     const userVideo = useRef();
